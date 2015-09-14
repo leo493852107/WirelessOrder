@@ -10,4 +10,14 @@
 
 @implementation TableView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        //init...
+        self.backgroundColor = [UIColor greenColor];
+        return self;
+    }
+    return nil;
+}
+
 @end

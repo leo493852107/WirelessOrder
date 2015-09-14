@@ -1,3 +1,4 @@
+
 //
 //  Constant.h
 //  WirelessOrder
@@ -9,5 +10,6 @@
 #ifndef WirelessOrder_Constant_h
 #define WirelessOrder_Constant_h
 
+#define MAX_WIDTH 260
 
 #endif

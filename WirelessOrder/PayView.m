@@ -10,4 +10,14 @@
 
 @implementation PayView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        //init...
+        self.backgroundColor = [UIColor grayColor];
+        return self;
+    }
+    return nil;
+}
+
 @end

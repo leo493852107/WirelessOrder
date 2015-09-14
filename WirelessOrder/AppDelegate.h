@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaterViewController.h"
+#import "DetailViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+
+@property (nonatomic, strong) UISplitViewController *splitVC;
+
+@property (nonatomic, strong) MaterViewController *master;
+@property (nonatomic, strong) DetailViewController *detail;
 
 @end
 

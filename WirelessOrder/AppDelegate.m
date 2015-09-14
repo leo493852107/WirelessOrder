@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Constant.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //1 master
+    self.master = [[MaterViewController alloc]init];
+    self.master.title = @"无线点餐";
+    
+    // UINavigationController
+    UINavigationController *masterNaVC = [[UINavigationController alloc]initWithRootViewController:self.master];
+    
+    //2 detail
+    self.detail = [[DetailViewController alloc]init];
+    UINavigationController *detailNaVC = [[UINavigationController alloc]initWithRootViewController:self.detail];
+    
+    //关联detail
+    self.master.detail = self.detail;
+    
+    //3 split
+    self.splitVC = [[UISplitViewController alloc]init];
+    self.splitVC.viewControllers = @[masterNaVC,detailNaVC];
+    
+    self.splitVC.maximumPrimaryColumnWidth = MAX_WIDTH;
+    
+    self.window.rootViewController = self.splitVC;
+    
     return YES;
 }
 

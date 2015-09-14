@@ -10,4 +10,14 @@
 
 @implementation MenuView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        //init...
+        self.backgroundColor = [UIColor orangeColor];
+        return self;
+    }
+    return nil;
+}
+
 @end

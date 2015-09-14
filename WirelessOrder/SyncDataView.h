@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuManager.h"
 
-@interface SyncDataView : UIView
+@interface SyncDataView : UIView <UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+
+@property (nonatomic, strong) NSArray *datasource;
+@property (nonatomic, strong) UITableView *tv;
+
+@property (nonatomic, strong) MenuManager *menuManager;
 
 @end

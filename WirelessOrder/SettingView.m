@@ -10,4 +10,14 @@
 
 @implementation SettingView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        //init...
+        self.backgroundColor = [UIColor purpleColor];
+        return self;
+    }
+    return nil;
+}
+
 @end
